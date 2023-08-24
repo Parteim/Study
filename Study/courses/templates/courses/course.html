@@ -1,0 +1,27 @@
+{% extends 'courses/base.html' %}
+{% load static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/course.css' %}">
+
+{% endblock styles %}
+
+{% block main %}
+
+<div class="courses_container">
+
+    <ul class="course__list">
+        {% for course in courses %}
+        <li class="course__item">
+            <a href="{% url 'topics' course.pk %}" class="course__link">
+                <h2 class="course__title">{{ course.title }}  </h2>
+            </a>
+            <p class="course__description">{{ course.description }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+
+
+</div>
+
+{% endblock main %}

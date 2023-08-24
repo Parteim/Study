@@ -1,0 +1,92 @@
+:root {
+	--index: calc(1vw + 1vh);
+
+    --color_bace: #90B77D;
+    --color_secondary: #42855B;
+    --color_lite: #D2D79F; 
+    --color_durk: #483838; 
+
+
+    --color_durk: #1F1E24; 
+    --color_green: #23B68C; 
+}
+
+body {
+    background-color: #1F1E24;
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+.cases__container {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    width: 90%;
+    height: 90%;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.case__item {
+    position: relative;
+
+    width: calc(var(--index) * 10);
+    height: calc(var(--index) * 9);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border: calc(var(--index) / 4) solid #45444A;
+    border-radius: calc(var(--index) - 7px);
+
+    transition: all .2s;
+
+}
+
+.case__item:hover {
+    border: calc(var(--index) / 4) solid #FBFAFF;
+}
+
+.case__item:hover .case_img {
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+.case_img {
+    position: absolute;
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 50%;
+
+    transition: all .2s;
+}
+
+.django_icon{
+    fill: #23B68C;
+    /* background-color: #23B68C; */
+}
+
+.python_icon {
+    fill: #4299BA;
+}
+
+.SQL_icon {
+    fill: #746DB3;
+}
+
+.CSS_icon {
+    fill: #F981AF;
+}
+
+
+.case_title {
+    display: none;
+}

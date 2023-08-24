@@ -1,0 +1,28 @@
+{% extends 'courses/base.html' %}
+{% load static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/course.css' %}">
+<link rel="stylesheet" href="{% static 'css/topic_instance.css' %}">
+
+{% endblock styles %}
+
+{% block main %}
+
+<div class="courses_container">
+
+    <ul class="course__list">
+        {% for material in topic.materialtext_set.all %}
+        <li class="course__item">
+<!--            <a href="#" class="course__link">-->
+<!--                <h2 class="course__title">{{ material.title }}  </h2>-->
+<!--            </a>-->
+            <p class="course__description">{{ material.text }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+
+
+</div>
+
+{% endblock main %}
